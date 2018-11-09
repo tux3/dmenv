@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Changelog - dmenv</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Changelog";
+    var mkdocs_page_input_path = "changelog.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> dmenv</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../usage/">Usage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Changelog</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#060">0.6.0</a></li>
+    
+
+    <li class="toctree-l2"><a href="#050">0.5.0</a></li>
+    
+
+    <li class="toctree-l2"><a href="#043">0.4.3</a></li>
+    
+
+    <li class="toctree-l2"><a href="#042">0.4.2</a></li>
+    
+
+    <li class="toctree-l2"><a href="#041">0.4.1</a></li>
+    
+
+    <li class="toctree-l2"><a href="#040">0.4.0</a></li>
+    
+
+    <li class="toctree-l2"><a href="#034">0.3.4</a></li>
+    
+
+    <li class="toctree-l2"><a href="#033">0.3.3</a></li>
+    
+
+    <li class="toctree-l2"><a href="#032">0.3.2</a></li>
+    
+
+    <li class="toctree-l2"><a href="#031">0.3.1</a></li>
+    
+
+    <li class="toctree-l2"><a href="#030">0.3.0</a></li>
+    
+
+    <li class="toctree-l2"><a href="#023">0.2.3</a></li>
+    
+
+    <li class="toctree-l2"><a href="#022">0.2.2</a></li>
+    
+
+    <li class="toctree-l2"><a href="#021">0.2.1</a></li>
+    
+
+    <li class="toctree-l2"><a href="#020">0.2.0</a></li>
+    
+
+    <li class="toctree-l2"><a href="#010">0.1.0</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">dmenv</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Changelog</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="060">0.6.0<a class="headerlink" href="#060" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Run <code>setup.py develop</code> with <code>--no-deps</code></li>
+<li>Rename <code>show</code> to <code>show:venv_path</code>, add <code>show:deps</code> to display the list of dependencies</li>
+</ul>
+<h1 id="050">0.5.0<a class="headerlink" href="#050" title="Permanent link">&para;</a></h1>
+<ul>
+<li><code>dmenv init</code>: since name is required, it is now an argument, no longer an option.
+  So instead of <code>dmenv init --name foo --version 0.42</code>, use <code>dmenv init foo --version 0.42</code></li>
+<li>Add a command named <code>dmenv develop</code> that justs runs <code>python setup.py develop</code> and nothing else</li>
+<li><code>dmenv install</code>: add <code>--no-upgrade-pip</code> and <code>--no-develop</code> options</li>
+</ul>
+<h1 id="043">0.4.3<a class="headerlink" href="#043" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Add a <code>--author</code> option to <code>dmenv init</code>, used when generating the <code>setup.py</code> file</li>
+<li><code>dmenv lock</code> now exits immediately if the lock file is missing. (#12)</li>
+<li>Workaround Debian bug in pip (#15)</li>
+</ul>
+<h1 id="042">0.4.2<a class="headerlink" href="#042" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>Write some metadata inside the <code>requirements.lock</code> file</p>
+</li>
+<li>
+<p>Improve <code>dmenv run</code>:</p>
+</li>
+<li>Suggest running <code>lock</code> or <code>install</code></li>
+<li>Do not crash if used without arguments</li>
+</ul>
+<h1 id="041">0.4.1<a class="headerlink" href="#041" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Fix CI on Windows.</li>
+</ul>
+<h1 id="040">0.4.0<a class="headerlink" href="#040" title="Permanent link">&para;</a></h1>
+<ul>
+<li><code>dmenv</code> no longer needs a configuration file</li>
+<li>Find the Python interpreter to use by looking in the PATH environment variable</li>
+</ul>
+<h1 id="034">0.3.4<a class="headerlink" href="#034" title="Permanent link">&para;</a></h1>
+<ul>
+<li>If <code>dmenv</code> is run <em>inside an existing virtualenv</em>, just use it. Fix #9</li>
+</ul>
+<h1 id="033">0.3.3<a class="headerlink" href="#033" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Also upgrade pip when running <code>dmenv install</code></li>
+<li>Fix incorrect message when running <code>dmenv lock</code></li>
+</ul>
+<h1 id="032">0.3.2<a class="headerlink" href="#032" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Fix regression introduced in 0.3.1: create config path parent subdirectory
+  before trying to write inside it.</li>
+</ul>
+<h1 id="031">0.3.1<a class="headerlink" href="#031" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Add a <code>dmenv</code> subdirectory to the configuration file path.</li>
+</ul>
+<h1 id="030">0.3.0<a class="headerlink" href="#030" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Replace command <code>freeze</code> by <code>lock</code>.</li>
+</ul>
+<h1 id="023">0.2.3<a class="headerlink" href="#023" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Add command <code>dmenv init</code> to generate a working <code>setup.py</code> file.</li>
+</ul>
+<h1 id="022">0.2.2<a class="headerlink" href="#022" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Fix running dmenv on Windows</li>
+<li>The configuration file is now read from $HOME (<code>~/.config</code> on Linux and macOS, <code>%HOME%\AppData\Local</code> on Windows).</li>
+</ul>
+<h1 id="021">0.2.1<a class="headerlink" href="#021" title="Permanent link">&para;</a></h1>
+<ul>
+<li>The <code>.dmenv.toml</code> file is now required.</li>
+</ul>
+<h1 id="020">0.2.0<a class="headerlink" href="#020" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Can be used with multiple python versions, using the <code>.dmenv.toml</code> config file.</li>
+</ul>
+<h1 id="010">0.1.0<a class="headerlink" href="#010" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Initial release.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../faq/" class="btn btn-neutral" title="FAQ"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../faq/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
