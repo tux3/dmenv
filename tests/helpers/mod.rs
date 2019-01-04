@@ -36,6 +36,11 @@ impl TestApp {
             include_str!("../../demo/setup.py"),
         )
         .expect("");
+        std::fs::write(
+            self.tmp_path.join("setup.cfg"),
+            include_str!("../../demo/setup.cfg"),
+        )
+        .expect("");
     }
 
     pub fn remove_setup_py(&self) {
