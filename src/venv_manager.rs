@@ -5,6 +5,7 @@ use colored::*;
 use error::*;
 use lock::Lock;
 use python_info::PythonInfo;
+use setup_cfg::SetupCfg;
 use std::io::Write;
 
 pub const LOCK_FILE_NAME: &str = "requirements.lock";
@@ -25,6 +26,7 @@ impl VenvManager {
     pub fn new(working_dir: std::path::PathBuf, python_info: PythonInfo) -> Result<Self, Error> {
         let lock_path = working_dir.join(LOCK_FILE_NAME);
         let setup_py_path = working_dir.join("setup.py");
+        let setup_cfg_path = working_dir.join("setup.cfg");
         let venv_path = if let Ok(env_var) = std::env::var("VIRTUAL_ENV") {
             std::path::PathBuf::from(env_var)
         } else {
@@ -35,6 +37,7 @@ impl VenvManager {
             venv: venv_path,
             lock: lock_path,
             setup_py: setup_py_path,
+            setup_cfg: setup_cfg_path,
         };
         let venv_manager = VenvManager { paths, python_info };
         Ok(venv_manager)
@@ -93,6 +96,21 @@ impl VenvManager {
     pub fn lock(&self) -> Result<(), Error> {
         if !self.paths.setup_py.exists() {
             return Err(Error::MissingSetupPy {});
+        }
+
+        let path = &self.paths.setup_cfg;
+        let setup_cfg = SetupCfg::from_path(&path);
+        if setup_cfg.is_ok() {
+            let s = setup_cfg.unwrap();
+            let name = s.get_single("metadata", "name");
+            let version = s.get_single("metadata", "version");
+            let deps = s.get_multi("options", "install_requires");
+            let dev_deps = s.get_multi("options.extras_require", "dev");
+            println!("name: {:?}, version: {:?}", name, version);
+            println!("deps: {:?}", deps);
+            println!("dev deps: {:?}", dev_deps);
+        } else {
+            print_warning(&setup_cfg.unwrap_err().to_string());
         }
 
         self.write_metadata()?;
@@ -347,4 +365,5 @@ struct Paths {
     venv: std::path::PathBuf,
     lock: std::path::PathBuf,
     setup_py: std::path::PathBuf,
+    setup_cfg: std::path::PathBuf,
 }
